@@ -1,5 +1,4 @@
-
-
+import AddHabit from "./components/AddHabit";
 import { useState } from "react";
 
 function App() {
@@ -25,21 +24,11 @@ function App() {
         Habit Tracker
       </h1>
 
-      <div className="flex gap-2 mb-6">
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Add a habit"
-          className="border px-4 py-2 rounded-lg"
-        />
-
-        <button
-          onClick={addHabit}
-          className="bg-black text-white px-4 py-2 rounded-lg"
-        >
-          Add
-        </button>
-      </div>
+      <AddHabit
+        input={input}
+        setInput={setInput}
+        addHabit={addHabit}
+      />
 
       <div className="space-y-2">
         {habits.map((habit) => (
