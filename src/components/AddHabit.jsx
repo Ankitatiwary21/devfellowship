@@ -4,7 +4,7 @@ function AddHabit({
   addHabit,
 }) {
   return (
-    <div className="flex gap-2 mb-6">
+        <div className="flex flex-col sm:flex-row gap-2 mb-6">
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}

@@ -1,20 +1,33 @@
 import HabitRow from "./HabitRow";
-import { format } from "date-fns";
+import { format,isToday  } from "date-fns";
 
-function HabitGrid({ habits, weekDays, toggleCompletion }) {
+function HabitGrid({
+  habits,
+  weekDays,
+  toggleCompletion,
+  deleteHabit,
+  renameHabit,
+}) {
   return (
     <div className="overflow-x-auto">
-      <div className="min-w-max">
+        <div className="min-w-fit">
         
         {/* Header Row */}
-        <div className="grid grid-cols-8 gap-2 mb-2">
+        <div className="grid grid-cols-8 gap-1 md:gap-2">
           <div></div>
 
           {weekDays.map((day) => (
             <div
-              key={day}
-              className="text-center font-medium text-gray-600"
-            >
+  key={day}
+  className={`text-center font-medium rounded-lg py-2
+    
+    ${
+      isToday(day)
+        ? "bg-blue-100 text-blue-700"
+        : "text-gray-600"
+    }
+  `}
+>
               {format(day, "EEE")}
             </div>
           ))}
@@ -24,11 +37,13 @@ function HabitGrid({ habits, weekDays, toggleCompletion }) {
         <div className="space-y-2">
           {habits.map((habit) => (
             <HabitRow
-              key={habit.id}
-              habit={habit}
-              weekDays={weekDays}
-              toggleCompletion={toggleCompletion}
-            />
+  key={habit.id}
+  habit={habit}
+  weekDays={weekDays}
+  toggleCompletion={toggleCompletion}
+  deleteHabit={deleteHabit}
+  renameHabit={renameHabit}
+/>
           ))}
         </div>
       </div>
