@@ -1,6 +1,11 @@
 # ANSWERS
 
 ## 1. How to run
+Deployed URL:
+https://devfellowship-ngfwbcenz-ankitatiwary33-gmailcoms-projects.vercel.app/
+ 
+OR
+
 
 Clone the repository:
 

@@ -2,6 +2,12 @@
 
 A responsive single-page habit tracker built with React and Tailwind CSS.
 
+## Live Demo
+
+Deployed here:
+https://devfellowship-ngfwbcenz-ankitatiwary33-gmailcoms-projects.vercel.app/
+
+
 ## Features
 
 - Add, rename, and delete habits
